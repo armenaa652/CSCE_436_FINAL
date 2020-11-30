@@ -70,7 +70,7 @@
     reverseIntroButtons();
 
     timelineIntroScreen.eventCallback('onReverseComplete', function() {
-      window.location = "Settings.html";
+      window.location = "new-group.html";
     });
   });
 
