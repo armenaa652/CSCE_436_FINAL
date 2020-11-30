@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./css/settings.css">
+
+</head>
+<body>
+
+
+<div class="component">
+
+  <aside>
+    <div class="preamp">
+      <label>Settings</label>
+    </div>
+  </aside>
+
+  <main>
+    <div class="presets">
+      <label>Presets:</label>
+      <select name="Custom" onchange="app.selectPreset(this)">
+        <option value="custom">Custom</option>
+      </select>
+      <button class="reset" onclick="app.reset()">Reset</button>
+    </div>
+
+    <div class="sliders">
+      
+      <svg preserveAspectRatio="none" viewBox="0 0 140 100">
+        <path d="" class="line-shadow"></path>
+        <path d="" class="line"></path>        
+      </svg>
+
+      <div class="range-slider">
+        <input type="range" orient="vertical" min="0" max="100" />
+        <div class="range-slider__bar"></div>
+        <div class="range-slider__thumb"></div>
+      </div>
+
+      <div class="range-slider">
+        <input type="range" orient="vertical" min="0" max="100" />
+        <div class="range-slider__bar"></div>
+        <div class="range-slider__thumb"></div>
+      </div>
+
+      <div class="range-slider">
+        <input type="range" orient="vertical" min="0" max="100" />
+        <div class="range-slider__bar"></div>
+        <div class="range-slider__thumb"></div>
+      </div>
+
+      <div class="range-slider">
+        <input type="range" orient="vertical" min="0" max="100" />
+        <div class="range-slider__bar"></div>
+        <div class="range-slider__thumb"></div>
+      </div>
+
+      <div class="range-slider">
+        <input type="range" orient="vertical" min="0" max="100" />
+        <div class="range-slider__bar"></div>
+        <div class="range-slider__thumb"></div>
+      </div>
+
+      <div class="range-slider">
+        <input type="range" orient="vertical" min="0" max="100" />
+        <div class="range-slider__bar"></div>
+        <div class="range-slider__thumb"></div>
+      </div>
+
+      <div class="range-slider">
+        <input type="range" orient="vertical" min="0" max="100" />
+        <div class="range-slider__bar"></div>
+        <div class="range-slider__thumb"></div>
+      </div>
+
+    </div>
+  </main>    
+</div>
+
+<div class="container-button">
+  <div class="vertical-center-button">
+      <a href="index.html"><button class="button-button">Main Menu</button></a>
+  </div>
+</div>
+<script  src="./js/settings.js"></script>
+
+</body>
+</html>

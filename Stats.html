@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Stats</title>
+  <link rel="stylesheet" href="./css/stats.css">
+
+</head>
+
+<body>
+
+<div id="app" class="container">
+    <div class="left">
+        <div class="toggle-container">
+            <div id="group1toggles">
+                <ul class="attlist">
+                    <h1>David Wang</h1>
+                    <li>
+                        <label>
+                            Weight 1:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group1.p1percent" />
+                        <div class="tot1">
+                            <span>{{group1.p1percent}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            Weight 2:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group1.p2percent" />
+                        <div class="tot1">
+                            <span>{{group1.p2percent}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            Weight 3:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group1.p3percent" />
+                        <div class="tot1">
+                            <span>{{group1.p3percent}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            Weight 4:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group1.p4percent" />
+                        <div class="tot1">
+                            <span>{{group1.p4percent}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            Weight 5:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group1.p5percent" />
+                        <div class="tot1">
+                            <span>{{group1.p5percent}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            Weight 6:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group1.p6percent" />
+                        <div class="tot1">
+                            <span>{{group1.p6percent}}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="group2toggles">
+                <ul class="attlist">
+                    <h1>John Doe</h1>
+                    <li>
+                        <label>
+                            Weight 1:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group2.p1percent" />
+                        <div class="tot2">
+                            <span>{{group2.p1percent}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            Weight 2:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group2.p2percent" />
+                        <div class="tot2">
+                            <span>{{group2.p2percent}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            Weight 3:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group2.p3percent" />
+                        <div class="tot2">
+                            <span>{{group2.p3percent}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            Weight 4:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group2.p4percent" />
+                        <div class="tot2">
+                            <span>{{group2.p4percent}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            Weight 5:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group2.p5percent" />
+                        <div class="tot2">
+                            <span>{{group2.p5percent}}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label>
+                            Weight 6:
+                        </label>
+                        <input type="range" min="0" max="100" v-model="group2.p6percent" />
+                        <div class="tot2">
+                            <span>{{group2.p6percent}}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="svg-container">
+
+            <svg id="chart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 805 768" enable-background="new 0 0 805 768" xml:space="preserve">
+                <line class="st0" x1="75.6" y1="195.3" x2="402.5" y2="384" />
+                <line class="st0" x1="402.5" y1="6.5" x2="402.5" y2="384" />
+                <line class="st0" x1="729.4" y1="195.3" x2="402.5" y2="384" />
+                <line class="st0" x1="729.4" y1="572.7" x2="402.5" y2="384" />
+                <line class="st0" x1="402.5" y1="761.5" x2="402.5" y2="384" />
+                <line class="st0" x1="75.6" y1="572.7" x2="402.5" y2="384" />
+                <circle class="st0" cx="402.5" cy="384" r="377.5" />
+                <circle class="st0" cx="402.5" cy="384" r="90.9" />
+                <circle class="st0" cx="402.5" cy="384" r="163.3" />
+                <circle class="st0" cx="402.5" cy="384" r="234.7" />
+                <circle class="st0" cx="402.5" cy="384" r="306.1" />
+                <g>
+                    <polygon class="shape1" :points="g1fullEndPath">
+                    </polygon>
+                </g>
+                <circle class="pointvert1" v-for="point in g1points" :cx="point.x" :cy="point.y" r="6" />
+                <g>
+                    <polygon class="shape2" :points="g2fullEndPath">
+                    </polygon>
+                </g>
+                <circle class="pointvert2" v-for="point in g2points" :cx="point.x" :cy="point.y" r="6" />
+            </svg>
+        </div>
+    </div>
+    
+
+</div>
+<div class="container-button">
+    <div class="vertical-center-button">
+        <a href="index.html"><button class="button-button">Main Menu</button></a>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/stats.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
