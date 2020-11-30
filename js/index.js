@@ -88,7 +88,7 @@
     reverseIntroButtons();
 
     timelineIntroScreen.eventCallback('onReverseComplete', function() {
-      window.location = "Stats.html";
+      window.location = "Leaderboard.html";
     });
   });
 })();
